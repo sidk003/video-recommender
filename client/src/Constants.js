@@ -1,0 +1,1 @@
+export const BASE_URL = 'https://voa87gcz69.execute-api.us-east-2.amazonaws.com/prod/recommend';
