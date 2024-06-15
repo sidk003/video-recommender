@@ -1,0 +1,14 @@
+mkdir packages
+cd packages
+python3 -m venv venv
+source venv/bin/activate
+mkdir python
+cd python
+pip install pandas -t .
+pip install numpy -t .
+rm -rf *dist-info
+cd ..
+zip -r my-first-lambda-package.zip python
+aws s3 cp my-first-lambda-package.zip s3://your-s3-bucket-name/
+
+create a layer and add from S3
